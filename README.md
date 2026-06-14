@@ -38,7 +38,7 @@ To publish with GitHub Pages:
 
 Your site should be available at:
 
-`https://amitgupta774.github.io/Titan-Eyeplus-Delivery-Experience/`
+`https://lwcx.in/?n=W1nfpDNXHtC4Gb-TU`
 
 ## Notes
 
