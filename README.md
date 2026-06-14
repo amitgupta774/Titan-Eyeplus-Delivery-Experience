@@ -38,7 +38,7 @@ To publish with GitHub Pages:
 
 Your site should be available at:
 
-`https://lwcx.in/?n=W1nfpDNXHtC4Gb-TU`
+`https://lwcx.in/?n=W1nfpDNXHtC4Gb`
 
 ## Notes
 
