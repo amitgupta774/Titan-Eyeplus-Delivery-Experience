@@ -6,6 +6,9 @@ let formData = {
     valueForMoney: null,
     storeLook: null,
     staffHelpfulness: null,
+    eyeTesting: null,
+    varietyDesigns: null,
+    onTimeDelivery: null,
     feedback: '',
     additionalFeedback: ''
 };
@@ -105,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function updateSubmitButtonState() {
     const submitBtn = document.getElementById('submitBtn');
     if (!submitBtn) return;
-    const required = ['billingEase','valueForMoney','storeLook','staffHelpfulness'];
+    const required = ['billingEase','valueForMoney','storeLook','staffHelpfulness','eyeTesting','varietyDesigns','onTimeDelivery'];
     const allSet = required.every(k => formData[k] !== null && formData[k] !== '');
     submitBtn.disabled = !allSet;
 }
@@ -184,9 +187,21 @@ function submitFeedback() {
         const b = document.querySelector('.scale-btn[data-target="staffHelpfulness"].selected');
         formData.staffHelpfulness = b ? b.dataset.value : '';
     }
+    if (!formData.eyeTesting) {
+        const b = document.querySelector('.scale-btn[data-target="eyeTesting"].selected');
+        formData.eyeTesting = b ? b.dataset.value : '';
+    }
+    if (!formData.varietyDesigns) {
+        const b = document.querySelector('.scale-btn[data-target="varietyDesigns"].selected');
+        formData.varietyDesigns = b ? b.dataset.value : '';
+    }
+    if (!formData.onTimeDelivery) {
+        const b = document.querySelector('.scale-btn[data-target="onTimeDelivery"].selected');
+        formData.onTimeDelivery = b ? b.dataset.value : '';
+    }
 
     // Check if all required ratings are set
-    const required = ['billingEase','valueForMoney','storeLook','staffHelpfulness'];
+    const required = ['billingEase','valueForMoney','storeLook','staffHelpfulness','eyeTesting','varietyDesigns','onTimeDelivery'];
     const allSet = required.every(k => formData[k] !== null && formData[k] !== '');
 
     if (!allSet) {
